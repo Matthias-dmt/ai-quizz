@@ -40,6 +40,8 @@ export default function Home() {
   const [submitted, setSubmitted] = useState<boolean>(false)
 
   const handleNext = () => {
+    console.log(started);
+    
     if (!started) {
       setStarted(true)
       return
@@ -90,7 +92,7 @@ export default function Home() {
       </div>
       <main className="flex justify-center flex-1">
       {!started
-        ? <h2 className="text-3xl font-bold">Welcome to the QuiQuiQuizzz 👋</h2>
+        ? <h2 className="text-3xl font-bold">Welcome to the Quizzz 👋</h2>
         : <div>
             <h2 className="text-3xl font-bold">{questions[currentQuestion].questionText}</h2>
             <div className="grid grid-cols-1 gap-6 mt-6">
